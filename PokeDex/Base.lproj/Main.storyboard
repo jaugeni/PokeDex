@@ -40,6 +40,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-8K-qaI">
                                 <rect key="frame" x="20" y="129" width="374" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eFJ-Wu-zdD">
                                     <size key="itemSize" width="105" height="105"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -47,7 +48,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="z4u-07-GFp">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="z4u-07-GFp" customClass="PokeCell" customModule="PokeDex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -79,6 +80,10 @@
                                             <constraint firstItem="Llj-R3-aw7" firstAttribute="leading" secondItem="z4u-07-GFp" secondAttribute="leading" id="ng5-iz-Uzy"/>
                                             <constraint firstItem="BoI-yE-pvy" firstAttribute="top" secondItem="Llj-R3-aw7" secondAttribute="bottom" id="rCW-7G-6Zz"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="BoI-yE-pvy" id="eTi-s5-jgk"/>
+                                            <outlet property="thumbImg" destination="Llj-R3-aw7" id="AF3-8o-gcK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -101,6 +106,9 @@
                             <constraint firstAttribute="trailing" secondItem="H2a-3v-aWk" secondAttribute="trailing" id="u51-LF-gq8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="f3M-8K-qaI" id="MV8-PB-xdv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
